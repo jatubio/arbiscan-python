@@ -3,13 +3,13 @@ from unittest import TestCase
 from unittest.async_case import IsolatedAsyncioTestCase
 
 from aiohttp import ClientSession
-from bscscan.core.async_client import AsyncClient
-from bscscan.core.sync_client import SyncClient
+from arbiscan.core.async_client import AsyncClient
+from arbiscan.core.sync_client import SyncClient
 
-# from bscscan import BscScan
+# from arbiscan import arbiscan
 from requests import Session
 
-CONFIG_PATH = "bscscan/configs/stable.json"
+CONFIG_PATH = "arbiscan/configs/stable.json"
 API_KEY = os.environ["API_KEY"]
 
 

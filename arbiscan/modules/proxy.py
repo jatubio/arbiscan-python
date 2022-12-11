@@ -1,7 +1,7 @@
-from bscscan.enums.actions_enum import ActionsEnum as actions
-from bscscan.enums.fields_enum import FieldsEnum as fields
-from bscscan.enums.modules_enum import ModulesEnum as modules
-from bscscan.enums.tags_enum import TagsEnum as tags
+from arbiscan.enums.actions_enum import ActionsEnum as actions
+from arbiscan.enums.fields_enum import FieldsEnum as fields
+from arbiscan.enums.modules_enum import ModulesEnum as modules
+from arbiscan.enums.tags_enum import TagsEnum as tags
 
 
 class Proxy:
@@ -14,9 +14,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(await client.get_proxy_block_number())
 
         Results::
@@ -44,9 +44,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_block_by_number(
                         tag="0x3d0900"
@@ -120,9 +120,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_block_transaction_count_by_number(
                         tag="0x3d0900"
@@ -154,9 +154,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_transaction_by_hash(
                         txhash="0xa0f2e87dfb75e3ebb8b23eff7b490442ff74cf8921eb61217dfc48918fe4020f"
@@ -204,9 +204,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_transaction_by_block_number_and_index(
                         tag="0x3d0900",
@@ -256,9 +256,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_transaction_count(
                         address="0x4430b3230294D12c6AB2aAC5C2cd68E80B16b581"
@@ -292,9 +292,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_transaction_receipt(
                         txhash="0xa0f2e87dfb75e3ebb8b23eff7b490442ff74cf8921eb61217dfc48918fe4020f"
@@ -355,9 +355,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_call(
                         to="0xAEEF46DB4855E25702F8237E8f403FddcaF931C0",
@@ -394,9 +394,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_code_at(
                         address="0x0000000000000000000000000000000000001000"
@@ -431,9 +431,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_storage_position_at(
                         position="0x0",
@@ -467,9 +467,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(await client.get_proxy_gas_price())
 
         Results::
@@ -503,9 +503,9 @@ class Proxy:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_proxy_est_gas(
                         data="0x4e71d92d",

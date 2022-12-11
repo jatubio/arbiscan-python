@@ -1,6 +1,6 @@
-from bscscan.enums.actions_enum import ActionsEnum as actions
-from bscscan.enums.fields_enum import FieldsEnum as fields
-from bscscan.enums.modules_enum import ModulesEnum as modules
+from arbiscan.enums.actions_enum import ActionsEnum as actions
+from arbiscan.enums.fields_enum import FieldsEnum as fields
+from arbiscan.enums.modules_enum import ModulesEnum as modules
 
 
 class Contracts:
@@ -16,9 +16,9 @@ class Contracts:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_contract_abi(
                         contract_address="0x0000000000000000000000000000000000001004"
@@ -50,9 +50,9 @@ class Contracts:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_contract_source_code(
                         contract_address="0x0000000000000000000000000000000000001004"

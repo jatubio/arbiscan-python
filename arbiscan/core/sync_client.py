@@ -1,7 +1,7 @@
-import bscscan
-from bscscan.core.base import BaseClient
-from bscscan.enums.fields_enum import FieldsEnum as fields
-from bscscan.utils.parsing import ResponseParser as parser
+import arbiscan
+from arbiscan.core.base import BaseClient
+from arbiscan.enums.fields_enum import FieldsEnum as fields
+from arbiscan.utils.parsing import ResponseParser as parser
 from requests import Session
 
 
@@ -9,7 +9,7 @@ class SyncClient(BaseClient):
     def _build(self):
         for func, v in self._config.items():
             if not func.startswith("_"):  # disabled if _
-                attr = getattr(getattr(bscscan, v["module"]), func)
+                attr = getattr(getattr(arbiscan, v["module"]), func)
                 setattr(self, func, self._exec(attr))
         return self
 

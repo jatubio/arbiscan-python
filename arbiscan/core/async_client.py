@@ -1,15 +1,15 @@
-import bscscan
+import arbiscan
 from aiohttp import ClientSession, ClientTimeout
-from bscscan.core.base import BaseClient
-from bscscan.enums.fields_enum import FieldsEnum as fields
-from bscscan.utils.parsing import ResponseParser as parser
+from arbiscan.core.base import BaseClient
+from arbiscan.enums.fields_enum import FieldsEnum as fields
+from arbiscan.utils.parsing import ResponseParser as parser
 
 
 class AsyncClient(BaseClient):
     async def _build(self):
         for func, v in self._config.items():
             if not func.startswith("_"):  # disabled if _
-                attr = getattr(getattr(bscscan, v["module"]), func)
+                attr = getattr(getattr(arbiscan, v["module"]), func)
                 setattr(self, func, await self._exec(attr))
         return self
 

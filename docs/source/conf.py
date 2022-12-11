@@ -13,13 +13,13 @@
 import os
 import sys
 
-# sys.path.insert(0, os.path.abspath("../../../bscscan-python"))
+# sys.path.insert(0, os.path.abspath("../../../arbiscan-python"))
 sys.path.insert(0, os.path.abspath("./../.."))
 
 
 # -- Project information -----------------------------------------------------
 
-project = "bscscan-python"
+project = "arbiscan-python"
 copyright = "2021, Panagiotis-Christos Kotsias (hi@pankotsias.com)"
 author = "Panagiotis-Christos Kotsias (hi@pankotsias.com)"
 

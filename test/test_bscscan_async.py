@@ -4,9 +4,9 @@ import os
 from datetime import datetime
 from unittest import IsolatedAsyncioTestCase
 
-from bscscan import BscScan
+from arbiscan import arbiscan
 
-CONFIG_PATH = "bscscan/configs/stable.json"
+CONFIG_PATH = "arbiscan/configs/stable.json"
 API_KEY = os.environ["API_KEY"]
 
 
@@ -26,11 +26,11 @@ class Case(IsolatedAsyncioTestCase):
     async def test_methods(self):
         print(f"\nMODULE: {self._MODULE}")
         config = load(CONFIG_PATH)
-        async with BscScan(api_key=API_KEY, asynchronous=True, debug=True) as bscscan:
+        async with arbiscan(api_key=API_KEY, asynchronous=True, debug=True) as arbiscan:
             for fun, v in config.items():
                 if not fun.startswith("_"):  # disabled if _
                     if v["module"] == self._MODULE:
-                        res = await getattr(bscscan, fun)(**v["kwargs"])
+                        res = await getattr(arbiscan, fun)(**v["kwargs"])
                         print(f"ASYNC: True, METHOD: {fun}, RTYPE: {type(res)}")
                         fname = f"logs/standard/{fun}.json"
                         log = {

@@ -1,7 +1,7 @@
-from bscscan.enums.actions_enum import ActionsEnum as actions
-from bscscan.enums.fields_enum import FieldsEnum as fields
-from bscscan.enums.modules_enum import ModulesEnum as modules
-from bscscan.enums.tags_enum import TagsEnum as tags
+from arbiscan.enums.actions_enum import ActionsEnum as actions
+from arbiscan.enums.fields_enum import FieldsEnum as fields
+from arbiscan.enums.modules_enum import ModulesEnum as modules
+from arbiscan.enums.tags_enum import TagsEnum as tags
 
 
 class Tokens:
@@ -17,9 +17,9 @@ class Tokens:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_total_supply_by_contract_address(
                             contract_address="0xe9e7cea3dedca5984780bafc599bd69add087d56"
@@ -51,9 +51,9 @@ class Tokens:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_circulating_supply_by_contract_address(
                         contract_address="0xe9e7cea3dedca5984780bafc599bd69add087d56"
@@ -86,9 +86,9 @@ class Tokens:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_acc_balance_by_token_contract_address(
                         contract_address="0xe9e7cea3dedca5984780bafc599bd69add087d56",

@@ -1,4 +1,4 @@
-from .client import BscScan
+from .client import arbiscan
 from .modules.accounts import Accounts as accounts
 from .modules.blocks import Blocks as blocks
 from .modules.contracts import Contracts as contracts

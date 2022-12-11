@@ -1,21 +1,21 @@
-from bscscan.core.async_client import AsyncClient
-from bscscan.core.base import BaseClient
-from bscscan.core.sync_client import SyncClient
+from arbiscan.core.async_client import AsyncClient
+from arbiscan.core.base import BaseClient
+from arbiscan.core.sync_client import SyncClient
 
 
-class BscScan:
+class arbiscan:
     """Client factory."""
 
     def __new__(cls, api_key: str, asynchronous=True, debug=False, timeout=None) -> BaseClient:
         """Create a new client.
 
         Args:
-            api_key (str): Your BscScan.com API key.
+            api_key (str): Your arbiscan.com API key.
             asynchronous (bool, optional): Whether client is async or not. Defaults to True.
             debug (bool, optional): Display generated URLs for debugging. Defaults to False.
 
         Returns:
-            BaseClient: BscScan client.
+            BaseClient: arbiscan client.
         """
         if asynchronous:
             return AsyncClient(api_key=api_key, debug=debug, timeout=timeout)

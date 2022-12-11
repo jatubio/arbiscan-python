@@ -1,6 +1,6 @@
-from bscscan.enums.actions_enum import ActionsEnum as actions
-from bscscan.enums.fields_enum import FieldsEnum as fields
-from bscscan.enums.modules_enum import ModulesEnum as modules
+from arbiscan.enums.actions_enum import ActionsEnum as actions
+from arbiscan.enums.fields_enum import FieldsEnum as fields
+from arbiscan.enums.modules_enum import ModulesEnum as modules
 
 
 class Logs:
@@ -46,9 +46,9 @@ class Logs:
 
         Example::
 
-            from bscscan import BscScan
+            from arbiscan import arbiscan
 
-            async with BscScan(YOUR_API_KEY) as client:
+            async with arbiscan(YOUR_API_KEY) as client:
                 print(
                     await client.get_logs(
                         from_block=4993830,

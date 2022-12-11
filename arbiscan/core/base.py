@@ -1,7 +1,7 @@
 import json
 from importlib import resources
 
-from bscscan import configs
+from arbiscan import configs
 
 CONFIG_FILE = "stable.json"
 

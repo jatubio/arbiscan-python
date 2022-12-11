@@ -1,1 +1,1 @@
-pip install git+https://github.com/jatubio/bscscan-python.git@master
+pip install git+https://github.com/jatubio/arbiscan-python.git@master
